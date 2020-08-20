@@ -23,7 +23,7 @@ import { TsServerLogLevel, TypeScriptServiceConfiguration } from './utils/config
 import { Disposable } from './utils/dispose';
 import * as fileSchemes from './utils/fileSchemes';
 import { Logger } from './utils/logger';
-import { isWeb } from './utils/platform';
+//import { isWeb } from './utils/platform';
 import { TypeScriptPluginPathsProvider } from './utils/pluginPathsProvider';
 import { PluginManager } from './utils/plugins';
 import { TelemetryProperties, TelemetryReporter, VSCodeTelemetryReporter } from './utils/telemetry';
@@ -222,12 +222,6 @@ export default class TypeScriptServiceClient extends Disposable implements IType
 	}
 
 	public get capabilities() {
-		if (isWeb()) {
-			return new ClientCapabilities(
-				ClientCapability.Syntax,
-				ClientCapability.EnhancedSyntax);
-		}
-
 		if (this.apiVersion.gte(API.v400)) {
 			return new ClientCapabilities(
 				ClientCapability.Syntax,
@@ -693,10 +687,10 @@ export default class TypeScriptServiceClient extends Disposable implements IType
 					return root.uri.fsPath;
 				}
 			}
-			return roots[0].uri.fsPath;
 		}
 
-		return undefined;
+
+		return roots[0].uri.fsPath;
 	}
 
 	public execute(command: keyof TypeScriptRequests, args: any, token: vscode.CancellationToken, config?: ExecConfig): Promise<ServerResponse.Response<Proto.Response>> {

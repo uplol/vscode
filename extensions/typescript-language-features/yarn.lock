@@ -1151,9 +1151,12 @@ typescript-vscode-sh-plugin@^0.6.14:
   resolved "https://registry.yarnpkg.com/typescript-vscode-sh-plugin/-/typescript-vscode-sh-plugin-0.6.14.tgz#a81031b502f6346a26ea49ce082438c3e353bb38"
   integrity sha512-AkNlRBbI6K7gk29O92qthNSvc6jjmNQ6isVXoYxkFwPa8D04tIv2SOPd+sd+mNpso4tNdL2gy7nVtrd5yFqvlA==
 
-"typescript-web-server@git://github.com/mjbvz/ts-server-web-build":
+"typescript-web-server@link:../../../../../TypeScript/built/typescript-web-server":
   version "0.0.0"
-  resolved "git://github.com/mjbvz/ts-server-web-build#1d85be25043f9b5e36a531941ea345dd5a2ca007"
+  uid ""
+
+"typescript-web-server@link:/home/vagrant/TypeScript/built/typescript-web-server":
+  version "0.0.0"
 
 unique-filename@^1.1.1:
   version "1.1.1"
