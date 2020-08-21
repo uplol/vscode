@@ -20,6 +20,7 @@
     "rimraf": "^2.6.3",
     "semver": "5.5.1",
     "typescript-vscode-sh-plugin": "^0.6.14",
+    "typescript-web-server": "link:/home/vagrant/TypeScript/built/typescript-web-server",
     "vscode-extension-telemetry": "0.1.1",
     "vscode-nls": "^4.1.1"
   },
@@ -29,7 +30,6 @@
     "@types/semver": "^5.5.0",
     "copy-webpack-plugin": "^6.0.3",
     "terser": "^4.8.0",
-    "typescript-web-server": "git://github.com/mjbvz/ts-server-web-build",
     "vscode": "^1.1.36"
   },
   "scripts": {
